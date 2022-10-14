@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "を入力してください。"
+            age:
+              blank: "空になっています。入力してください。"
+    models:
+      user: "ユーザー"
+    attributes:
+      user:
+        name: "名前"
+        age: "年齢"
+  helpers: # ここから下を追加する
+    submit:
+      create: 登録する
+      update: 更新する
+      submit: 保存する
+      Log in: ログイン

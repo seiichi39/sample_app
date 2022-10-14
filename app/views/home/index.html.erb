@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="col-md-10 col-md-offset-2">
+    <h1>Dash Boards</h1>
+    <h3><%= current_user.name %></h3>
+
+    <div class="actions">
+      <%= link_to t("users.shared.links.edit_user"), edit_user_registration_path, class: "btn btn-primary w-100" %><br />
+      <%= link_to t("users.shared.links.sign_out"), destroy_user_session_path, method: :delete, class: "btn btn-warning w-100" %>
+    </div>
+
+  </div>
+</div>
