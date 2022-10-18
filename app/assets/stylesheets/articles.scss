@@ -1,0 +1,52 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* 共通 */
+
+.back {
+  margin-top: ２0px;
+}
+
+/* articleテーブル */
+
+#table-articles {
+  th {
+    white-space: nowrap;
+    text-align: center;
+    border-bottom: solid;
+  }
+  td {
+    white-space: nowrap;
+    text-align: center;
+  }
+}
+
+/* 記事新規作成画面 */
+
+.label-article-new {
+  text-align: center;
+}
+
+.form-controll {
+  text-align: center;
+}
+
+.btn-article-new {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* 記事一覧画面 */
+
+#index-button {
+  width: 600px;
+}
+
+/* 記事編集画面 */
+
+.btn-article-edit {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}

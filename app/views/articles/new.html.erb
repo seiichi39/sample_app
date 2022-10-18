@@ -1,0 +1,10 @@
+<% provide(:title, 'New') %>
+<% provide(:class_text, 'article-new') %>
+<% provide(:button_text, '新規作成') %>
+
+<div class="container">
+  <div class="col-md-10 col-md-offset-2">
+    <h1><%= t('.new') %></h1>
+    <%= render 'shared/form' %>
+  </div>
+</div>

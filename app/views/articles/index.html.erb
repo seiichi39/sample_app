@@ -1,0 +1,40 @@
+<% provide(:title, 'article_index') %>
+
+<div class="container">
+  <div class="col-md-10 col-md-offset-2">
+
+  <h1><%= t('.index') %></h1>
+
+  <div class="actions">
+    <h3><%= link_to t('.create_article'), new_article_path, class: "btn btn-primary", id: "index-button" %></h3>
+  </div>
+
+  <table class="table table-condensed table-hover" id="table-articles">
+    <thead>
+      <tr>
+        <th><%= t('.show_detail') %></th>
+        <th><%= t('.title') %></th>
+        <th><%= t('.content') %></th>
+        <th><%= t('.image') %></th>
+        <th><%= t('.edit_destroy') %></th>
+      </tr>
+    </thead>
+
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to t('.detail'), article_path(article), class: "btn btn-primary" %></td>
+        <td><%= article.title %></td>
+        <td><%= article.content %></td>
+        <td><%= image_tag article.image.url if article.image? %></td>
+        <td>
+          <%= link_to t('.edit'), edit_article_path(article), class: "btn btn-success" %>
+          <%= link_to t('.destroy'), article_path(article), method: :delete,
+              data: { confirm: "削除してよろしいですか？" },
+              class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  </div>
+</div>
