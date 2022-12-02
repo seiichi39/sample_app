@@ -1,0 +1,37 @@
+<% provide(:title, 'article_show') %>
+
+<div class="container">
+  <div class="col-md-10 col-md-offset-2">
+
+  <h1><%= t('.show') %></h1>
+
+  <table class="table table-condensed table-hover" id="table-articles">
+    <thead>
+      <tr>
+        <th><%= t('.title') %></th>
+        <th><%= t('.content') %></th>
+        <th><%= t('.image') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @article.title %></td>
+        <td><%= @article.content %></td>
+        <td><%= image_tag @article.image.url if @article.image? %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <%= link_to t('.edit'), edit_article_path(@article), class: "btn btn-success" %>
+    <%= link_to t('.destroy'), article_path(@article), method: :delete,
+          data: { confirm: "削除してよろしいですか？" },
+          class: "btn btn-danger" %>
+  </div>
+
+  <div class="actions">
+    <%= link_to t('.back-article-index'), articles_path, class: "btn btn-primary" %>
+  </div>
+
+  </div>
+</div>

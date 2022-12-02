@@ -28,7 +28,7 @@ gem 'net-pop'
 gem 'dotenv-rails'
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
-
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
